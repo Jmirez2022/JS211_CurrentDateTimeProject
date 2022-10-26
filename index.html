@@ -11,5 +11,20 @@
     <div id="display-element"></div>
     <button onclick="displayDate()">Click Me</button>
     <hr/>
+    <form class="calculator">
+      <label for="first-number">First Number:</label>
+      <input type="number" id="first-Number" name="first-Number" placeholder="type the first number" value="" onkeyup="saveFirstNumber(this.value)">
+      <label for="second-number">Second Number:</label>
+    <input type="number" id="second-Number" name="second-Number" placeholder="type the second number" onkeyup="saveSecondNumber(this.value)">
+    <button type="button" name="add" id="addition" onclick="changeOperation(this.id)">+</button>
+    </form>
+    <div id="result"></div>
+    <button type="button" onclick="equals()">Equals</button>
+    
+    <div class="data">
+  <label for="datatype">Type data:</label>
+  <input type="data" id="data" name="data" placeholder="type the data" value="" onkeyup="data(this.value)">
+  <button type="button" onclick="data()">Data</button>
+    </div>
   </body>
 </html>

@@ -13,14 +13,46 @@ const displayDate = () => {
   document.getElementById("display-element").innerHTML = currentDate;
 }
  
+let firstNum 
+let secondNum 
+let operation 
 
 // Write a JavaScript program to convert a number to a string.
 
+const saveFirstNumber = (num) => {
+  firstNum = parseInt(num)  
+}
 
 
-// Write a JavaScript program to convert a string to the number.
+const saveSecondNumber = (num) => {
+  secondNum = parseInt(num)
+}
 
 
+const add = (numA, numB) => {
+  const sum = (numA + numB)
+  return sum
+}
+
+const changeOperation = (chosenOperation) => {
+  operation = chosenOperation
+
+  console.log(operation)
+}
+
+const putResultInElement = (operationResults) => {
+  
+  document.getElementById("result").innerHTML = "Results: " + operationResults
+}
+
+  const equals = () => {
+    switch (operation) {
+      case "addition":  putResultInElement(add(firstNum, secondNum)) 
+      break;
+    }
+  }
+
+ 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
   // * Boolean
@@ -30,6 +62,43 @@ const displayDate = () => {
   // * NaN
   // * String
   
+let testArray = []
+
+let different = NaN
+let number = 2
+let NotE = undefined
+let yes = true
+let NValid = null
+let anotherString = "word"
+
+const data = (testArray) => {
+
+  if(testArray === 'true' || testArray === 'false'){
+    return " Boolean"
+  }
+  if(testArray === 'null') {
+    return " Null"
+  }
+  if(testArray === 'undefined'){
+    return " Undefined"
+  }
+  if(testArray === 'string' || testArray === ''){
+    return "String"
+  }
+  if(isNaN(parseInt(testArray)) === true){
+    return "NaN"
+  } else if(isNaN(parseInt(testArray)) === false){
+    return "Number"}
+
+}
+
+data()
+
+const datatypes = (testArray) => {
+  
+  document.getElementById("data").innerHTML = Results
+  
+}
 
   
 // Write a JavaScript program that adds 2 numbers together.
@@ -58,10 +127,3 @@ const displayDate = () => {
 // 6. go to `index.html` 
 // 7. create inputs, buttons and event listeners that render the code blocks you built above to the DOM.
 
-
-
-
-// Additional Resources
-// Video1: https://player.vimeo.com/video/377147232
-// Video2: https://www.youtube.com/embed/bkvH28PXLWc
-// Video3: https://www.youtube.com/embed/TrGI9Yki-24
